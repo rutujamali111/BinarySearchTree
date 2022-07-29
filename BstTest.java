@@ -8,6 +8,7 @@ public class BstTest {
 		myBTree.add(30);
 		myBTree.add(70);
 		System.out.println(myBTree.getSize());
+		myBTree.search(31);
 
 	}
 

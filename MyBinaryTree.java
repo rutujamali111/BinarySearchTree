@@ -31,4 +31,29 @@ public class MyBinaryTree<K extends Comparable<K>>
 		// TODO Auto-generated method stub
 		return current==null?0:1+this.getSizeRecursively(current.left)+getSizeRecursively(current.right);
 	}
+	public void search(K key)
+	{
+		searchREcursively(root,key);
+	}
+
+	
+
+	private void searchREcursively(MyBinaryNode<K> current, K key) {
+		// TODO Auto-generated method stub
+		if(current==null)
+			System.out.println("key not found");
+		
+		else 
+			{
+			int compareResult=key.compareTo(current.key);
+			if(compareResult==0)
+				System.out.println("key found");
+			
+			else if(compareResult<0)
+				searchREcursively(current.left, key);
+			else
+				searchREcursively(current.right,key);
+			
+			}
+	}
 }
