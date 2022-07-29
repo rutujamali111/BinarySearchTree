@@ -6,7 +6,8 @@ public class BstTest {
 		MyBinaryTree<Integer> myBTree=new MyBinaryTree<>();
 		myBTree.add(56);
 		myBTree.add(30);
-		myBTree.add(70);	
+		myBTree.add(70);
+		System.out.println(myBTree.getSize());
 
 	}
 
